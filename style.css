@@ -1,0 +1,324 @@
+.logo{
+    max-width: 48px;
+    max-height: 48px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+title{
+    display: block;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 27.017px;
+    line-height: 52px;
+    letter-spacing: 0.01em;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 10px;
+}
+/* main{ */
+    /* background: rgba(255, 0, 0, 0.208); */
+    /* width: 75%;     responsive desktop
+    position: fixed; */
+/* } */
+aside{
+    background: aqua;
+    /* width: 20%;     responsive desktop
+    float: right; */
+}
+.reloj {
+    background: #a6a6ab;
+    /* width: 63%; */
+    height: 10rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: #FFFFFF;
+    padding: 8px;
+    box-shadow: 0px 5.74129px 5.74129px rgb(0 0 0 / 25%);
+    border-radius: 12.5026px;
+}
+.graph{
+
+    width: 100%;
+    background: #ffffff;
+    /* height: 19rem;   importante size de grafica */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 5.74129px 5.74129px rgb(0 0 0 / 25%);
+    border-radius: 12.5026px;
+}
+#chart_preassure{
+    padding: 5px;
+}
+#myChart{
+    padding: 5px;
+}
+.value_graph {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center;
+}
+.grupodepilotos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.pilot{
+    width: 79px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.pilot label{
+    font-size: 26.8749px;
+}
+.info_plc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 17px;
+    width: 242px;
+    gap: 15px;
+    /* border: 1px solid black; */
+    background: #FFFFFF;
+    box-shadow: 0px 5.74129px 5.74129px rgb(0 0 0 / 25%);
+    border-radius: 12.5026px;
+}
+.part {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    width: 179px;
+    justify-content: space-between;
+}
+.bloc_div{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 33px;
+}
+.info_plc_txt {
+    width: 66px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.3143px;
+    line-height: 33px;
+    /* identical to box height, or 172% */
+
+    letter-spacing: 0.01em;
+
+    color: #000000;
+}
+section#info {
+    height: 202px;
+}
+
+/* on off RUN*/
+.lbl_switch{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #aaa;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+ }
+ #pilot_run:checked~ .lbl_switch{
+    background: #61ff6b;
+ }
+ #pilot_run{
+    display: none;
+ }
+
+/* ON OFF ALERT */
+#pilot_alert:checked~ .lbl_switch{
+    background: #ffb361;
+}
+#pilot_alert{
+    display: none;
+ }
+/* ON OFF STOP */
+#pilot_stop{
+    display: none;
+}
+#pilot_stop:checked~ .lbl_switch{
+    background: #ff6161;
+}
+
+
+/* info */
+.value_plc{
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.3143px;
+    line-height: 33px;
+
+    letter-spacing: 0.01em;
+
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* gauge temp */
+
+/* gauge pressure */
+
+.sc-gauge  {
+     width:200px; 
+     height:200px; 
+     margin-top: 21px; 
+     text-align: center;
+}
+.sc-background { 
+    position:relative; 
+    height:100px; 
+    margin-bottom:10px; 
+    background-color: rgb(162 156 156);
+    border-radius:150px 150px 0 0; 
+    overflow:hidden; 
+    text-align:center; 
+}
+.sc-mask { 
+    position:absolute; 
+    top:20px; right:20px; 
+    left:20px; height:80px; 
+    background-color: #fcfcfc;
+    border-radius:150px 150px 0 0; 
+}
+.sc-percentage { 
+    position:absolute; 
+    top:100px; 
+    left:-200%; 
+    width:400%; 
+    height:400%; 
+    margin-left:100px; 
+    background-color:#6fde61; 
+}
+
+.sc-percentage { 
+    transform:rotate(100deg);  /*  importante */
+    transform-origin:top center; 
+}
+.sc-min { 
+    float:left; 
+}
+.sc-max { 
+    float:right; 
+}
+.sc-value { 
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 700;
+}
+/* cilcos */
+.cicles_responsive {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.circulo {
+    width: 25px;
+    height: 25px;
+    background: #aaa;
+    border-radius: 100px;
+}
+::-webkit-scrollbar{
+    width: 15px;
+  
+    background: white;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: #0070B1;
+    /* border-radius: 10px; */
+}
+
+/* report */
+.war_wth {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.warming_info {
+    /* width: 100%; */
+    padding: 7px;
+    gap: 7px;
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 5.74129px 5.74129px rgb(0 0 0 / 25%);
+    border-radius: 12.5026px;
+}
+/* responsive */
+
+@media only screen and (min-width:768px) {
+    .cicles_responsive {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        
+        width: 67%;
+        justify-content: end;
+    }
+    .graph{
+        width: 68%;
+    }
+    .value_graph{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .grupodepilotos{
+        flex-direction: row;
+        gap: 30px;
+        padding: 16px;
+    }
+    main{
+        flex-direction: inherit;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .info_plc h2{
+        height: 40px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .info_plc{
+        gap: 1px;
+    }
+    section#info{
+        width: 50%;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .value_graph{
+        width: 80%;
+    }
+    .circulo{
+        width: 48px;
+        height: 48px;
+    }
+
+}

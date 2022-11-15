@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIX Cloud</title>
+    <!-- chars js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.2.0/dist/chartjs-adapter-luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0/dist/chartjs-plugin-streaming.min.js"></script>
+    <!-- chars js ^ -->
+
+    <!-- css y js -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   
+
+   
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header>
+    <img class="logo" src="img/logo.png" alt="logo">
+    <title>Machine 001</title>
+    <div class="cicles_responsive">
+        <div id="cycles" class="circulo"></div>
+        <span>cycles</span>
+    </div>
+   </header>
+    <main>
+        <section id="section_graph_p" class="value_graph">
+            <article class="reloj" id="reloj_pressure">
+                <!-- reloj -->
+                <div class="sc-gauge">
+                    <div class="sc-background">
+                      <div id="presure_percent" class="sc-percentage"></div>
+                      <div class="sc-mask"></div>
+                      <span id="value_txt_gauge_pressure" class="sc-value">-</span>
+                    </div>
+                    <span class="sc-min">0 pk</span>
+                    <span>Pressure</span>
+                    <span class="sc-max">50 pk</span>
+                </div>
+            </article>
+            <article class="graph">
+                <!-- Graph Preassure -->
+                <canvas id="chart_preassure"></canvas>
+            </article>
+        </section>
+        <div id="press_advert" class="war_wth">
+            <div class="warming_info">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 9.00024V14.0002M12 17.5002V18.0002" stroke="#EC8181" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M2.23203 19.0163L10.35 3.05225C11.063 1.64925 12.94 1.64925 13.652 3.05225L21.769 19.0163C22.45 20.3603 21.544 22.0002 20.116 22.0002H3.88303C2.45603 22.0002 1.54903 20.3603 2.23303 19.0163H2.23203Z" stroke="#EC8181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Pressure exceeds limits</span>
+            </div>            
+        </div>
+
+        <section id="section_graph_t" class="value_graph">
+            <article class="reloj">
+                <!-- reloj -->
+                <div class="sc-gauge">
+                    <div class="sc-background">
+                      <div id="temperature_percent" class="sc-percentage"></div>
+                      <div class="sc-mask"></div>
+                      <span id="value_txt_gauge_temp" class="sc-value">-</span>
+                    </div>
+                    <span class="sc-min">0 C°</span>
+                    <span>Temperature</span>
+                    <span class="sc-max">50 C°​</span>
+                </div>
+            </article>
+            <article class="graph">
+                <canvas id="myChart"></canvas>
+            </article>
+        </section>
+        <div id="temp_advert" class="war_wth">
+            <div class="warming_info">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 9.00024V14.0002M12 17.5002V18.0002" stroke="#EC8181" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M2.23203 19.0163L10.35 3.05225C11.063 1.64925 12.94 1.64925 13.652 3.05225L21.769 19.0163C22.45 20.3603 21.544 22.0002 20.116 22.0002H3.88303C2.45603 22.0002 1.54903 20.3603 2.23303 19.0163H2.23203Z" stroke="#EC8181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Temperature exceeds limits</span>
+            </div>            
+        </div>
+
+        <section id="status">
+            <h2>STATUS MACHINE</h2>
+            <div class="grupodepilotos">
+                <div class="pilot">
+                    <input type="checkbox" class="pilotos" name="" id="pilot_run" disabled>
+                    <label id="run_plc" class="lbl_switch" for="pilot_run" disabled></label>
+                    <label>RUN</label>
+                </div>
+                <div class="pilot">
+                    <input type="checkbox" class="pilotos" name="" id="pilot_alert" disabled>
+                    <label id="emerg_plc" class="lbl_switch" for="pilot_alert" disabled></label>
+                    <label>ALERT</label>
+                </div>
+                <div class="pilot">
+                    <input type="checkbox" class="pilotos" name="" id="pilot_stop" disabled>
+                    <label id="stop_plc" class="lbl_switch" for="pilot_stop" disabled></label>
+                    <label>STOP</label>
+                </div>                
+            </div>
+
+        </section>
+        <section id="info">
+            <div class="bloc_div">
+                <div class="info_plc">
+                    <h2>Machine 001</h2>
+                    <div class="part">
+                        <div class="info_plc_txt">Status</div>
+                        <div id="valor_status_plc" class="value_plc">---</div>                    
+                    </div>
+                    <div class="part">
+                        <div class="info_plc_txt">PLC</div>
+                        <div class="value_plc">KOYO</div>                    
+                    </div>
+                    <div class="part">
+                        <div class="info_plc_txt">CPU</div>
+                        <div class="value_plc">CP2-01</div>                    
+                    </div>
+                    <div class="part">
+                        <div class="info_plc_txt">Pressure</div>
+                        <div id="percentage_press_info" class="value_plc">67%</div>                    
+                    </div>
+                    <div class="part">
+                        <div class="info_plc_txt">Temperature</div>
+                        <div id="percentage_temp_info" class="value_plc">45%</div>                    
+                    </div>
+                </div>                
+            </div>
+
+        </section>
+    </main>
+</body>
+
+<!-- mqtt -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.js" integrity="sha512-yX4jaiU9Ai9dzaimFoTq+tQYOrAMNP+EWiiUVsru3ypsAi76c0zCPBfxKagLkKjC4ZeLMEQTa7aE7CtjTmlgDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="srcipt.js"></script>
+<!-- mqtt -->
+<script src="preassure.js"></script>
+<script src="temperature.js"></script>
+
+</html>
