@@ -15,8 +15,13 @@ In addition, the web app is designed to update the data automatically as new dat
 By following the "MachineDemo/channels" topic, our application makes sure that it only receives data that is relevant to the monitoring of the machine. At the same time, the use of the free HiveMQ broker provides an efficient and scalable solution for handling machine data.
 
 Overall, our web application is designed to make machine monitoring easier and more efficient for users by providing a clear and up-to-date real-time user interface with relevant data from the machine and its environment.
-
-
+## Dependencies
+- NodeJs
+- MQTT
+Install MQTT:
+```
+npm i mqtt
+```
 ## Usage
 To use the Web App MQTT Broker Connect, you need to install it on a server and access the corresponding URL. The application has been tested with Apache2 on Ubuntu, but it should work with other web servers as well.
 1. Clone the repository to your server.
