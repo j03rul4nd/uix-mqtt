@@ -2,7 +2,7 @@ const mqtt = require('mqtt')
 const client  = mqtt.connect('mqtt://broker.mqttdashboard.com')
 
 function eventconect() {
-  client.subscribe('ZentHub/MachineDemo/canales', function (err) {})
+  client.subscribe('MachineDemo/canales', function (err) {})
 }
 
 function eventmsg(topic, message) {

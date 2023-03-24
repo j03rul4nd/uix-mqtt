@@ -254,6 +254,38 @@ section#info {
     /* border-radius: 10px; */
 }
 
+/* operadores graficas  */
+.operaciones_grafica {
+    display: flex;
+    gap: 5px;
+}
+.boton_estados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5.12px;
+    
+
+    width: 66.53px;
+    height: 83.17px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 5.1179px 5.1179px rgba(0, 0, 0, 0.25);
+    border-radius: 6.39738px;
+}
+
+.operadores_size{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#play_graph_press, #screen_minimizar_press, #screen_minimizar_temp,#play_graph_temp{
+    display: none;
+}
+
 /* report */
 .war_wth {
     width: 100%;

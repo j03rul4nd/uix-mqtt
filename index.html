@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIX Cloud</title>
+    <!-- icon logo -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
     <!-- chars js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
@@ -46,7 +48,7 @@
                     </div>
                     <span class="sc-min">0 pk</span>
                     <span>Pressure</span>
-                    <span class="sc-max">50 pk</span>
+                    <span class="sc-max">100 pk</span>
                 </div>
             </article>
             <article class="graph">
@@ -54,6 +56,61 @@
                 <canvas id="chart_preassure"></canvas>
             </article>
         </section>
+
+        <!-- botones de la pantalla -->
+
+        <div class="operadores_size">
+            <div class="operaciones_grafica">
+                <div id="pause_graph_press" class="boton_estados"> 
+                    <label >
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.539 24.6211V6.42694C14.539 4.69964 13.8097 4.00873 11.9672 4.00873H7.32272C5.48028 4.00873 4.75098 4.69964 4.75098 6.42694V24.6211C4.75098 26.3484 5.48028 27.0393 7.32272 27.0393H11.9672C13.8097 27.0393 14.539 26.3484 14.539 24.6211Z" stroke="#101010" stroke-width="1.91921" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7816 24.6211V6.42694C27.7816 4.69964 27.0523 4.00873 25.2099 4.00873H20.5654C18.7357 4.00873 17.9937 4.69964 17.9937 6.42694V24.6211C17.9937 26.3484 18.723 27.0393 20.5654 27.0393H25.2099C27.0523 27.0393 27.7816 26.3484 27.7816 24.6211Z" stroke="#101010" stroke-width="1.91921" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                    </label>
+                    <div class="txt_btn_estados">Stop</div>                 
+                </div>
+                <div id="play_graph_press" class="boton_estados">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.5917 25.5295C24.3486 25.5295 24.1055 25.44 23.9135 25.248C23.5425 24.877 23.5425 24.2629 23.9135 23.8918C28.5324 19.2729 28.5324 11.7624 23.9135 7.15626C23.5425 6.78521 23.5425 6.17106 23.9135 5.80001C24.2846 5.42897 24.8987 5.42897 25.2698 5.80001C30.6308 11.161 30.6308 19.887 25.2698 25.248C25.0779 25.44 24.8348 25.5295 24.5917 25.5295Z" fill="#101010"/>
+                        <path d="M6.50014 25.5295C6.25704 25.5295 6.01394 25.44 5.82202 25.248C0.461018 19.887 0.461018 11.161 5.82202 5.80001C6.19307 5.42897 6.80722 5.42897 7.17827 5.80001C7.54931 6.17106 7.54931 6.78521 7.17827 7.15626C2.55936 11.7752 2.55936 19.2857 7.17827 23.8918C7.54931 24.2629 7.54931 24.877 7.17827 25.248C6.98635 25.44 6.74324 25.5295 6.50014 25.5295Z" fill="#101010"/>
+                        <path d="M15.5459 29.2272C13.9466 29.2144 12.424 28.9585 11.0038 28.4595C10.5048 28.2804 10.2361 27.7302 10.4152 27.2312C10.5944 26.7322 11.1317 26.4635 11.6435 26.6427C12.8718 27.0649 14.1769 27.2952 15.5587 27.2952C16.9278 27.2952 18.2456 27.0649 19.4611 26.6427C19.9601 26.4763 20.5103 26.7322 20.6894 27.2312C20.8686 27.7302 20.5999 28.2804 20.1009 28.4595C18.6679 28.9585 17.1453 29.2272 15.5459 29.2272Z" fill="#101010"/>
+                        <path d="M19.7682 4.44379C19.6658 4.44379 19.5507 4.43099 19.4483 4.39261C18.2328 3.95759 16.915 3.74008 15.5459 3.74008C14.1769 3.74008 12.8718 3.97038 11.6435 4.39261C11.1317 4.55894 10.5944 4.30305 10.4152 3.80405C10.2361 3.30505 10.5048 2.75488 11.0038 2.57575C12.4368 2.07676 13.9594 1.82086 15.5459 1.82086C17.1325 1.82086 18.6679 2.07676 20.0881 2.57575C20.5871 2.75488 20.8558 3.30505 20.6766 3.80405C20.5359 4.20069 20.1648 4.44379 19.7682 4.44379Z" fill="#101010"/>
+                        <path d="M11.3748 15.524V13.3873C11.3748 10.726 13.2556 9.63844 15.5586 10.9691L17.4139 12.0439L19.2691 13.1186C21.5722 14.4493 21.5722 16.6244 19.2691 17.955L17.4139 19.0298L15.5586 20.1045C13.2556 21.4352 11.3748 20.3476 11.3748 17.6863V15.524Z" fill="#101010"/>
+                    </svg>
+                    <div class="txt_btn_estados">Play</div>    
+                </div>
+                <div id="screen_maximizar_press" class="boton_estados"> 
+                    <label >
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.75024 4.00775L11.1482 10.3414" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.75024 26.976L11.1482 20.6423" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7828 26.976L21.4492 20.6423" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7184 4.00775L21.3848 10.3414" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.0247 4.00775H27.7828V9.76588" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7828 21.2821V27.0402H22.0247" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5084 27.0402H4.75024V21.2821" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.75024 9.76588V4.00775H10.5084" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                    </label>    
+                    <div class="txt_btn_estados">Screen</div>               
+                </div>  
+                <div id="screen_minimizar_press" class="boton_estados">
+                    <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.75024 4.00775L11.1482 10.3414" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.75024 26.976L11.1482 20.6423" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.7828 26.976L21.4492 20.6423" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.7184 4.00775L21.3848 10.3414" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.3848 4.64755V10.4057H27.1429" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.1483 4.64755V10.4057H5.39014" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.1483 26.4005V20.6423H5.39014" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.3848 26.4005V20.6423H27.0786" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="txt_btn_estados">Screen</div>    
+                </div>       
+            </div> 
+        </div>
+
         <div id="press_advert" class="war_wth">
             <div class="warming_info">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +118,7 @@
                     <path d="M2.23203 19.0163L10.35 3.05225C11.063 1.64925 12.94 1.64925 13.652 3.05225L21.769 19.0163C22.45 20.3603 21.544 22.0002 20.116 22.0002H3.88303C2.45603 22.0002 1.54903 20.3603 2.23303 19.0163H2.23203Z" stroke="#EC8181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span>Pressure exceeds limits</span>
-            </div>            
+            </div>         
         </div>
 
         <section id="section_graph_t" class="value_graph">
@@ -75,13 +132,64 @@
                     </div>
                     <span class="sc-min">0 C°</span>
                     <span>Temperature</span>
-                    <span class="sc-max">50 C°​</span>
+                    <span class="sc-max">100 C°​</span>
                 </div>
             </article>
             <article class="graph">
                 <canvas id="myChart"></canvas>
             </article>
         </section>
+        <div class="operadores_size">
+            <div class="operaciones_grafica">
+                <div id="pause_graph_temp" class="boton_estados"> 
+                    <label >
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.539 24.6211V6.42694C14.539 4.69964 13.8097 4.00873 11.9672 4.00873H7.32272C5.48028 4.00873 4.75098 4.69964 4.75098 6.42694V24.6211C4.75098 26.3484 5.48028 27.0393 7.32272 27.0393H11.9672C13.8097 27.0393 14.539 26.3484 14.539 24.6211Z" stroke="#101010" stroke-width="1.91921" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7816 24.6211V6.42694C27.7816 4.69964 27.0523 4.00873 25.2099 4.00873H20.5654C18.7357 4.00873 17.9937 4.69964 17.9937 6.42694V24.6211C17.9937 26.3484 18.723 27.0393 20.5654 27.0393H25.2099C27.0523 27.0393 27.7816 26.3484 27.7816 24.6211Z" stroke="#101010" stroke-width="1.91921" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                    </label>
+                    <div class="txt_btn_estados">Stop</div>                 
+                </div>
+                <div id="play_graph_temp" class="boton_estados">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.5917 25.5295C24.3486 25.5295 24.1055 25.44 23.9135 25.248C23.5425 24.877 23.5425 24.2629 23.9135 23.8918C28.5324 19.2729 28.5324 11.7624 23.9135 7.15626C23.5425 6.78521 23.5425 6.17106 23.9135 5.80001C24.2846 5.42897 24.8987 5.42897 25.2698 5.80001C30.6308 11.161 30.6308 19.887 25.2698 25.248C25.0779 25.44 24.8348 25.5295 24.5917 25.5295Z" fill="#101010"/>
+                        <path d="M6.50014 25.5295C6.25704 25.5295 6.01394 25.44 5.82202 25.248C0.461018 19.887 0.461018 11.161 5.82202 5.80001C6.19307 5.42897 6.80722 5.42897 7.17827 5.80001C7.54931 6.17106 7.54931 6.78521 7.17827 7.15626C2.55936 11.7752 2.55936 19.2857 7.17827 23.8918C7.54931 24.2629 7.54931 24.877 7.17827 25.248C6.98635 25.44 6.74324 25.5295 6.50014 25.5295Z" fill="#101010"/>
+                        <path d="M15.5459 29.2272C13.9466 29.2144 12.424 28.9585 11.0038 28.4595C10.5048 28.2804 10.2361 27.7302 10.4152 27.2312C10.5944 26.7322 11.1317 26.4635 11.6435 26.6427C12.8718 27.0649 14.1769 27.2952 15.5587 27.2952C16.9278 27.2952 18.2456 27.0649 19.4611 26.6427C19.9601 26.4763 20.5103 26.7322 20.6894 27.2312C20.8686 27.7302 20.5999 28.2804 20.1009 28.4595C18.6679 28.9585 17.1453 29.2272 15.5459 29.2272Z" fill="#101010"/>
+                        <path d="M19.7682 4.44379C19.6658 4.44379 19.5507 4.43099 19.4483 4.39261C18.2328 3.95759 16.915 3.74008 15.5459 3.74008C14.1769 3.74008 12.8718 3.97038 11.6435 4.39261C11.1317 4.55894 10.5944 4.30305 10.4152 3.80405C10.2361 3.30505 10.5048 2.75488 11.0038 2.57575C12.4368 2.07676 13.9594 1.82086 15.5459 1.82086C17.1325 1.82086 18.6679 2.07676 20.0881 2.57575C20.5871 2.75488 20.8558 3.30505 20.6766 3.80405C20.5359 4.20069 20.1648 4.44379 19.7682 4.44379Z" fill="#101010"/>
+                        <path d="M11.3748 15.524V13.3873C11.3748 10.726 13.2556 9.63844 15.5586 10.9691L17.4139 12.0439L19.2691 13.1186C21.5722 14.4493 21.5722 16.6244 19.2691 17.955L17.4139 19.0298L15.5586 20.1045C13.2556 21.4352 11.3748 20.3476 11.3748 17.6863V15.524Z" fill="#101010"/>
+                    </svg>
+                    <div class="txt_btn_estados">Play</div>    
+                </div>
+                <div id="screen_maximizar_temp" class="boton_estados"> 
+                    <label >
+                        <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.75024 4.00775L11.1482 10.3414" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.75024 26.976L11.1482 20.6423" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7828 26.976L21.4492 20.6423" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7184 4.00775L21.3848 10.3414" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.0247 4.00775H27.7828V9.76588" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27.7828 21.2821V27.0402H22.0247" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5084 27.0402H4.75024V21.2821" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.75024 9.76588V4.00775H10.5084" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                        
+                    </label>    
+                    <div class="txt_btn_estados">Screen</div>               
+                </div>  
+                <div id="screen_minimizar_temp" class="boton_estados">
+                    <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.75024 4.00775L11.1482 10.3414" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.75024 26.976L11.1482 20.6423" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.7828 26.976L21.4492 20.6423" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.7184 4.00775L21.3848 10.3414" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.3848 4.64755V10.4057H27.1429" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.1483 4.64755V10.4057H5.39014" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.1483 26.4005V20.6423H5.39014" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.3848 26.4005V20.6423H27.0786" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="txt_btn_estados">Screen</div>    
+                </div>       
+            </div> 
+        </div>
         <div id="temp_advert" class="war_wth">
             <div class="warming_info">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

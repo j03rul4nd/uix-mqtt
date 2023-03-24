@@ -9,6 +9,15 @@ const config_temp = {
          }]
         } ,
     options: {
+        plugins:{
+            streaming:{
+                duration:30000, // escalar la grafica
+                // ttl: 300000 // 5 minutros en milisegundos
+            }
+        },
+      interaction: {
+        intersect: false
+      },
       responsive: true,
       scales: {
           x: {
@@ -25,7 +34,9 @@ const config_temp = {
               }
           },
           y: {
-              beginAtZero: true
+            min: 0,
+            max: 100,
+            beginAtZero: true
           }
       }
   }

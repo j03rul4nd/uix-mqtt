@@ -13,11 +13,21 @@ const config_preassure = {
     data,
     // data,
     options: {
+        plugins:{
+            streaming:{
+                duration:30000, // escalar la grafica
+                // ttl: 300000 // 5 minutros en milisegundos
+            }
+        },
+        interaction: {
+            intersect: false
+        },
         responsive: true,
         scales: {
             x: {
                 type: 'realtime',
                 realtime:{
+                    // delay: 5000,
                     onRefresh: chart => {
                         chart.data.datasets.forEach(dataset => {
                             dataset.data.push ({
@@ -29,6 +39,8 @@ const config_preassure = {
                 }
             },
             y: {
+                min: 0,
+                max: 100,
                 beginAtZero: true
             }
         }
