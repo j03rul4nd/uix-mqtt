@@ -1,4 +1,4 @@
-const client  = mqtt.connect('ws://broker.mqttdashboard.com:8000/mqtt')
+const client  = mqtt.connect('wss://broker.mqttdashboard.com:8000/mqtt')
 
 function eventconect() {
   //el topic al que nos suscribimos
